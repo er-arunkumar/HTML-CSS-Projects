@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background: #181818;
+    color: #e3e3e3;
+}
+.effect{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    letter-spacing: 8px;
+    cursor: pointer;
+}
+.effect::before,.effect::after{
+    content: 'ARUNKUMAR';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.effect:hover::before{
+    animation: effect 0.4s linear 6;
+    color:#ef1a61;
+    z-index: -2;
+}
+.effect:hover::after{
+    animation: effect 0.4s linear 6 reverse;
+    color:#2196f3;
+    z-index: -1;
+}
+@keyframes effect {
+    0%{
+        top: 0;
+        left:0;
+    }
+    20%{
+        top: -5px;
+        left:-5px;
+    }
+    40%{
+        top: 5px;
+        left:5px;
+    }
+    60%{
+        top: -5px;
+        left:5px;
+    }
+    80%{
+        top: 5px;
+        left:-5px;
+    }
+    100%{
+        top: 0;
+        left:0;
+    }
+}
